@@ -108,11 +108,13 @@ function getNextAvailableID(allBooks)
 }
 
 function getBookData() {
+    // this is where i would swap in sql
     var data = fs.readFileSync(datafile, 'utf8');
     return JSON.parse(data);
 }
 
 function saveBookData(data) {
+    // this is where i would swap in sql
     fs.writeFile(datafile, JSON.stringify(data, null, 4), function(err) {
         if (err) {
             console.log(err);

@@ -1,6 +1,6 @@
 (function() {
 
-    var app = angular.module('app', []);
+    var app = angular.module('app', ['ngRoute']);
 
     app.config(['$routeProvider', function ($routeProvider) {
         $routeProvider
@@ -14,11 +14,11 @@
                 controller: 'AddBookController',
                 controllerAs: 'addBook'
             })
-            .when('/EditBook/:bookID', {
-                templateUrl: '/app/templates/editBook.html',
-                controller: 'EditBookController',
-                controllerAs: 'editBook'
-            })
+            // .when('/EditBook/:bookID', {
+            //     templateUrl: '/app/templates/editBook.html',
+            //     controller: 'EditBookController',
+            //     controllerAs: 'editBook'
+            // })
             .otherwise('/');
     }]);
 }());
